@@ -38,7 +38,10 @@
     text-align: center
   
 .title
-  @apply text-[58px] font-[700] uppercase leading-[3.4rem] inline-flex relative
+  font-size: 58px
+  font-weight: 700
+  line-height: 3.4rem
+  @apply uppercase inline-flex relative
   span:first-child
     @include textGradient(31%, 100%)
   span:last-child
@@ -53,17 +56,19 @@
   @media screen and ( max-width: 991px )
     margin-bottom: 15px
   @media screen and ( max-width: 466px ) and (min-width: 0px)
-    @apply text-[2.3rem] mb-1
+    margin-bottom: 4px
+    font-size: 2.3rem
     
   
 
       
     
 .subTitle
-  @apply text-[25px] leading-7 inline-block
+  font-size: 25px
+  @apply leading-7 inline-block
   @include textGradient(61%, 110%)
   @media screen and ( max-width: 467px )
-    @apply text-[22px] 
+    font-size: 22px
 
 
 

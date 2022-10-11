@@ -11,7 +11,10 @@
     
 
 .card
-  @apply px-[31px] py-[36px] text-[18px] font-[100] inline-flex flex-col items-center text-white relative
+  @apply inline-flex flex-col items-center text-white relative
+  padding: 36px 31px
+  font-size: 18px
+  font-weight: 300
   border: 1px solid
   border-image-slice: 1
   overflow: hidden
@@ -19,7 +22,12 @@
   border-image-source: linear-gradient(-40deg, #09097900 60%, #ffffff00 100%)
     
   @media screen and ( max-width: 467px ) and (min-width: 0px)
-    @apply px-[14px] py-[19px] text-[16px]
+    padding-left: 14px
+    padding-right: 19px
+    font-size: 16px
+    
+
+
 
   &:hover
     color: #fff !important
@@ -59,8 +67,11 @@
   
 
 .cardNumber
-  @apply text-[60px] font-[700] text-white leading-[0.6] mt-8 mb-1
+  line-height: 0.6
+  font-size: 60px
+  font-weight: 700
+  @apply text-white mt-8 mb-2
 
   @media screen and ( max-width: 467px )
-    @apply text-[45px]
+    font-size: 45px
 
