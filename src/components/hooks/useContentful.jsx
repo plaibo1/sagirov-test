@@ -2,13 +2,13 @@ import { createClient } from "contentful";
 
 const useContentful = () => {
   const client = createClient({
-    space: "xz7e8qci9me3",
-    accessToken: "gDkEA_GXoiOhq55hCnLviNVR4xn8tTB2EmCzGhQZF9w"
+    space: process.env.REACT_APP_CONTENTFUL_SPACE,
+    accessToken: process.env.REACT_APP_CONTENTFUL_KEY
   });
 
   const getHeaderData = async () => {
     try {
-      const headerData = await client.getEntry('10maIzCdW9yOpkwiNLE3JR');
+      const headerData = await client.getEntry(process.env.REACT_APP_CONTENTFUL_ENTRYID);
 
       return headerData.fields;
     } catch (error) {
